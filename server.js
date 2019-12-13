@@ -5,7 +5,7 @@ const { log, ExpressAPILogMiddleware } = require('@rama41222/node-logger');
 
 const config = {
     name: "klass-subsets-service",
-    port: 3000
+    port: 5000
 };
 
 const app = express();
