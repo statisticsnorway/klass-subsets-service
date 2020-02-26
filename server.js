@@ -14,6 +14,15 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(ExpressAPILogMiddleware(logger, { request: true }));
 
+const subsetsRouter = express.Router();
+
+subsetsRouter.route('/subsets')
+    .get((req, res) => {
+      const subsets = [{id: 1, name: "The very first subset"}, {id: 2, name: "Second subset"}];
+      res.json(subsets);
+    });
+app.use('/api', subsetsRouter);
+
 app.get('/', (req, res) => {
   res.status(200).send('klass subsets service is running');
 });
