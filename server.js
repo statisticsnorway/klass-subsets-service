@@ -23,12 +23,17 @@ const subsetsRouter = express.Router();
 app.use('/subsets', subsetsRouter);
 
 subsetsRouter.route('/')
-    .get((req, res) => res.status(200).json(data))
+    .get((req, res) =>
+        res.status(200).json(data))
     .post((req, res) => {
       const subset = req.body;
       subset.id = data.length+1;
       data.push(subset);
       res.status(200).json(subset);
+    })
+    .put((req, res) => {
+        data[data.findIndex(i => i.id == req.body.id)] = req.body;
+        res.status(200).json(req.body);
     });
 
 subsetsRouter.route('/:id')
