@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(ExpressAPILogMiddleware(logger, { request: true }));
 
-app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.2 is running'));
+app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.0 is running'));
 
 const data = JSON.parse(fs.readFileSync('./src/test/subsets.json'));
 const subsetsRouter = express.Router();
@@ -24,7 +24,12 @@ app.use('/subsets', subsetsRouter);
 
 subsetsRouter.route('/')
     .get((req, res) => res.status(200).json(data))
-    .post((req, res) => res.status(200).json(req.body));
+    .post((req, res) => {
+      const subset = req.body;
+      subset.id = data.length+1;
+      data.push(subset);
+      res.status(200).json(subset);
+    });
 
 subsetsRouter.route('/:id')
     .get((req, res) => res.status(200).json(data.find(i => i.id == req.params.id)));
