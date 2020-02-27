@@ -20,9 +20,9 @@ app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.0 is
 const data = JSON.parse(fs.readFileSync('./src/test/subsets.json'));
 const subsetsRouter = express.Router();
 
-app.use('/subsets', subsetsRouter);
+app.use('/v1', subsetsRouter);
 
-subsetsRouter.route('/')
+subsetsRouter.route('/subsets')
     .get((req, res) =>
         res.status(200).json(data))
     .post((req, res) => {
@@ -36,7 +36,7 @@ subsetsRouter.route('/')
         res.status(200).json(req.body);
     });
 
-subsetsRouter.route('/:id')
+subsetsRouter.route('/subsets/:id')
     .get((req, res) => res.status(200).json(data.find(i => i.id == req.params.id)));
 
 app.listen(config.port, () => logger.info(`${config.name} listening on port ${config.port}`));
