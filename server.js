@@ -12,7 +12,7 @@ const config = {
 const logger = log({ console: true, file: false, label: config.name });
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({origin: 'http://localhost:3000'}));
 app.use(ExpressAPILogMiddleware(logger, { request: true }));
 
 app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.0 is running'));

@@ -1,5 +1,81 @@
 [
-  {"id": 1, "name": "The very first subset"},
-  {"id": 2, "name": "Second subset"},
-  {"id": 3, "name": "Third subset"}
+  {"id": 1, "names": [{
+    "text": "The very first subset",
+    "lang": "no"
+  }]},
+  {"id": 2, "names": [{
+    "text":  "Second subset",
+    "lang": "no"
+  }]},
+  {
+    "id": 3,
+    "ownerId": "",
+    "names": [
+      {
+        "text": "Uttrekk for aller først test",
+        "lang": "nb"
+      }]
+    ,
+    "valid": {
+      "from": "2020-02-04T23:00:00.000Z",
+      "to": "2020-02-28T23:00:00.000Z"
+    },
+    "subject": "",
+    "descriptions": [],
+    "classifications": [
+      {
+        "name": "Standard for sivilstand",
+        "classificationType": "Klassifikasjon",
+        "lastModified": "2019-06-04T08:37:54.000+0000",
+        "_links": {
+          "self": {
+            "href": "https://data.ssb.no/api/klass/v1/classifications/19"
+          }
+        },
+        "id": "19",
+        "codes": [
+          {
+            "code": "1",
+            "parentCode": null,
+            "level": "1",
+            "name": "Ugift",
+            "shortName": "",
+            "presentationName": ""
+          },
+          {
+            "code": "2",
+            "parentCode": null,
+            "level": "1",
+            "name": "Gift",
+            "shortName": "",
+            "presentationName": ""
+          },
+          {
+            "code": "3",
+            "parentCode": null,
+            "level": "1",
+            "name": "Enke/enkemann",
+            "shortName": "",
+            "presentationName": ""
+          },
+          {
+            "code": "4",
+            "parentCode": null,
+            "level": "1",
+            "name": "Skilt",
+            "shortName": "",
+            "presentationName": ""
+          },
+          {
+            "code": "5",
+            "parentCode": null,
+            "level": "1",
+            "name": "Separert",
+            "shortName": "",
+            "presentationName": ""
+          }
+        ]
+      }
+    ]
+  }
 ]
