@@ -5,7 +5,7 @@
 
 Lightweight API application build upon Node server and Express library. 
 
-##Setup Guide
+## Setup Guide
 Check out the source code `git clone https://github.com/statisticsnorway/klass-subsets-service.git`.
 Enter the project folder locally `cd klass-subsets-service`.
 Install dependencies and build the code `npm install`.
@@ -17,5 +17,5 @@ It will bw available on the same URL
 
 The application shows access log in the console. 
 
-##GitHub
+## GitHub
 Give your feedback, register issues, suggestions and feature requests in the repository https://github.com/statisticsnorway/klass-subsets-service/issues
