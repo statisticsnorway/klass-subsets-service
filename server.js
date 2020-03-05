@@ -15,7 +15,7 @@ app.use(cors());
 const logger = log({ console: true, file: false, label: config.name });
 app.use(ExpressAPILogMiddleware(logger, { request: true, response: true }));
 
-app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.1 is running'));
+app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.2 is running'));
 
 const data = JSON.parse(fs.readFileSync('./src/test/subsets.json'));
 const subsetsRouter = express.Router();
