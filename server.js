@@ -9,13 +9,13 @@ const config = {
   port: 5000
 };
 
-const logger = log({ console: true, file: false, label: config.name });
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-app.use(ExpressAPILogMiddleware(logger, { request: true }));
+const logger = log({ console: true, file: false, label: config.name });
+app.use(ExpressAPILogMiddleware(logger, { request: true, response: true }));
 
-app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.0 is running'));
+app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.1 is running'));
 
 const data = JSON.parse(fs.readFileSync('./src/test/subsets.json'));
 const subsetsRouter = express.Router();
@@ -33,7 +33,7 @@ subsetsRouter.route('/subsets')
     })
     .put((req, res) => {
         data[data.findIndex(i => i.id == req.body.id)] = req.body;
-        res.status(200).json(req.body);
+        res.status(200).json(data.find(i => i.id = req.body.id));
     });
 
 subsetsRouter.route('/subsets/:id')
