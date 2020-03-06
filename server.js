@@ -15,14 +15,16 @@ app.use(cors());
 const logger = log({ console: true, file: false, label: config.name });
 app.use(ExpressAPILogMiddleware(logger, { request: true, response: true }));
 
-app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.2 is running'));
+app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.3 is running'));
+app.get('/auth', (req, res) => res.status(200).send('AUTHORIZED: klass subsets service v0.1.3 is running'));
 
 const data = JSON.parse(fs.readFileSync('./src/test/subsets.json'));
 const subsetsRouter = express.Router();
 
-app.use('/v1', subsetsRouter);
+app.use('/api', subsetsRouter);
+app.use('/auth', subsetsRouter);
 
-subsetsRouter.route('/subsets')
+subsetsRouter.route('/v1/subsets')
     .get((req, res) =>
         res.status(200).json(data))
     .post((req, res) => {
@@ -36,7 +38,7 @@ subsetsRouter.route('/subsets')
         res.status(200).json(data.find(i => i.id = req.body.id));
     });
 
-subsetsRouter.route('/subsets/:id')
+subsetsRouter.route('/v1/subsets/:id')
     .get((req, res) => res.status(200).json(data.find(i => i.id == req.params.id)));
 
 app.listen(config.port, () => logger.info(`${config.name} listening on port ${config.port}`));
