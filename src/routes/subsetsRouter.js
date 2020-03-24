@@ -4,8 +4,11 @@ const lds = require('./../services/lds-api');
 function routes(data) {
     const subsetsRouter = express.Router();
     subsetsRouter.route('/v1/subsets')
-        .get((req, res) =>
-            res.status(200).json(data))
+        .get((req, res) => {
+            lds.getSubsets()
+                .then(subset_data => res.status(200).json(subset_data))
+                .catch(err => console.error(err))
+        })
         .post((req, res) => {
             const subset = req.body;
             subset.id = data.length+1;
@@ -19,7 +22,7 @@ function routes(data) {
 
     subsetsRouter.route('/v1/subsets/:id')
         .get((req, res) => {
-            lds.getSubset(id)
+            lds.getSubset(req.params.id)
                 .then(subset_data => res.status(200).json(subset_data))
                 .catch(err => console.error(err))
         });

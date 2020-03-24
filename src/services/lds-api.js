@@ -6,6 +6,10 @@ module.exports.getSchema = function() {
     return fetch(`${url}/?schema`).then(response => response.json());
 };
 
+module.exports.getSubsets = function(id) {
+    return fetch(url).then(response => response.json());
+};
+
 module.exports.getSubset = function(id) {
     return fetch(`${url}/${id}`).then(response => response.json());
 };
