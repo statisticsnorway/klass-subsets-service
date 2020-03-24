@@ -16,7 +16,7 @@ app.use(cors());
 const logger = log({ console: true, file: false, label: config.name });
 app.use(ExpressAPILogMiddleware(logger, { request: true, response: true }));
 
-app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.3 is running'));
+app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.4 is running'));
 
 app.get('/klass-api', (req, res) => {
     fetch('https://data.ssb.no/api/klass/v1/classifications/68/codesAt.json?date=2020-03-18&selectCodes=1')
