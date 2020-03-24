@@ -30,7 +30,7 @@ app.get('/lds-klass', (req, res) => {
         .then(lds_data => res.status(200).json(lds_data));
 });
 
-app.get('/auth', (req, res) => res.status(200).send('AUTHORIZED: klass subsets service v0.1.3 is running'));
+app.get('/auth', (req, res) => res.status(200).send('AUTHORIZED: klass subsets service v0.1.4 is running'));
 
 const data = JSON.parse(fs.readFileSync('./src/test/subsets.json'));
 const subsetsRouter = express.Router();
