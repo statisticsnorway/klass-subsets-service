@@ -1,0 +1,70 @@
+{
+  "id": "88bdb2ef-10be-4c10-91b0-a459bd8d9d6f",
+  "name": [
+    {
+      "languageText": "Oslo Bærum Felter 1 og 2",
+      "languageCode": "nb"
+    },
+    {
+      "languageText": "Oslo Bærum Fields 1 and 2",
+      "languageCode": "en"
+    }
+  ],
+  "description": [
+    {
+      "languageText": "Lagret for test formål",
+      "languageCode": "nb"
+    },
+    {
+      "languageText": "Made for test purposes",
+      "languageCode": "en"
+    }
+  ],
+  "shortName": "Test subset 1",
+  "administrativeStatus": "OPEN",
+  "createdDate": "2020-03-24T13:05:17.343Z",
+  "createdBy": "Test user",
+  "version": "1.0.0",
+  "versionValidFrom": "2020-03-24T13:05:17.343Z",
+  "versionRationale": [
+    {
+      "languageText": "Har valgt tilfeldige koder fra to forskjellige klassifikasjoner",
+      "languageCode": "nb"
+    },
+    {
+      "languageText": "Random codes are chosen from two classifications",
+      "languageCode": "en"
+    }
+  ],
+  "lastUpdatedDate": "2020-03-24T13:05:17.343Z",
+  "lastUpdatedBy": "Test user",
+  "validFrom": "2020-03-24T13:05:17.343Z",
+  "validUntil": "2021-03-24T13:05:17.343Z",
+  "administrativeDetails": [
+    {
+      "administrativeDetailType": "ORIGIN",
+      "values": [
+        "https://data.ssb.no/api/klass/v1/classifications/68/codesAt.json?date=2020-03-18",
+        "https://data.ssb.no/api/klass/v1/classifications/131/codesAt.json?date=2020-03-18"
+      ]
+    }
+  ],
+  "codes": [
+    {
+      "urn": "urn:klass-api:classifications:68:codesAt.json?date=2020-03-18&selectCodes=1",
+      "rank": 1
+    },
+    {
+      "urn": "urn:klass-api:classifications:68:codesAt.json?date=2020-03-18&selectCodes=2",
+      "rank": 4
+    },
+    {
+      "urn": "urn:klass-api:classifications:131:codesAt.json?date=2020-03-18&selectCodes=0301",
+      "rank": 2
+    },
+    {
+      "urn": "urn:klass-api:classifications:131:codesAt.json?date=2020-03-18&selectCodes=3024",
+      "rank": 3
+    }
+  ]
+}

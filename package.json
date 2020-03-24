@@ -1,6 +1,6 @@
 {
   "name": "klass-subsets-service",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Klass subsets service",
   "main": "server.js",
   "scripts": {
