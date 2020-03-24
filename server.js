@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { log, ExpressAPILogMiddleware } = require('@rama41222/node-logger');
+const fetch = require('node-fetch');
 const fs = require('fs');
 
 const config = {
@@ -16,6 +17,13 @@ const logger = log({ console: true, file: false, label: config.name });
 app.use(ExpressAPILogMiddleware(logger, { request: true, response: true }));
 
 app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.3 is running'));
+
+app.get('/klass-api', (req, res) => {
+    fetch('https://data.ssb.no/api/klass/v1/classifications/68/codesAt.json?date=2020-03-18&selectCodes=1')
+        .then(response => response.json())
+        .then(data => res.status(200).json(data));
+});
+
 app.get('/auth', (req, res) => res.status(200).send('AUTHORIZED: klass subsets service v0.1.3 is running'));
 
 const data = JSON.parse(fs.readFileSync('./src/test/subsets.json'));
