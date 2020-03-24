@@ -25,7 +25,7 @@ app.use('/auth', subsetsRouter);
 app.get('/auth', (req, res) => res.status(200).send('AUTHORIZED: klass subsets service v0.1.6 is running'));
 
 app.get('/klass-api', (req, res) => {
-    klass.getCode()
+    klass.getCode(1)
         .then(code => res.status(200).json(code))
         .catch(err => console.error(err));
 });
