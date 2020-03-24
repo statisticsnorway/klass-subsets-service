@@ -1,5 +1,5 @@
 const express = require('express');
-const lds = require('./src/services/lds-api');
+const lds = require('./../services/lds-api');
 
 function routes(data) {
     const subsetsRouter = express.Router();
