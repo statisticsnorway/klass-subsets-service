@@ -2,11 +2,11 @@
   "id": "88bdb2ef-10be-4c10-91b0-a459bd8d9d6f",
   "name": [
     {
-      "languageText": "Oslo Bærum Felter 1 og 2",
+      "languageText": "Oslo Bærum Felter 1 og 2 v2",
       "languageCode": "nb"
     },
     {
-      "languageText": "Oslo Bærum Fields 1 and 2",
+      "languageText": "Oslo Bærum Fields 1 and 2 v2",
       "languageCode": "en"
     }
   ],
@@ -24,22 +24,22 @@
   "administrativeStatus": "OPEN",
   "createdDate": "2020-03-24T13:05:17.343Z",
   "createdBy": "Test user",
-  "version": "1.0.0",
-  "versionValidFrom": "2020-03-24T13:05:17.343Z",
+  "version": "2.0.0",
+  "versionValidFrom": "2020-03-25T13:05:17.343Z",
   "versionRationale": [
     {
-      "languageText": "Har valgt tilfeldige koder fra to forskjellige klassifikasjoner",
+      "languageText": "La til kode 5",
       "languageCode": "nb"
     },
     {
-      "languageText": "Random codes are chosen from two classifications",
+      "languageText": "Added code 5",
       "languageCode": "en"
     }
   ],
   "lastUpdatedDate": "2020-03-24T13:05:17.343Z",
   "lastUpdatedBy": "Test user",
-  "validFrom": "2020-03-24T13:05:17.343Z",
-  "validUntil": "2021-03-24T13:05:17.343Z",
+  "validFrom": "2020-03-25T13:05:17.343Z",
+  "validUntil": "2021-03-26T13:05:17.343Z",
   "administrativeDetails": [
     {
       "administrativeDetailType": "ORIGIN",
@@ -57,6 +57,10 @@
     {
       "urn": "urn:klass-api:classifications:68:codesAt.json?date=2020-03-18&selectCodes=2",
       "rank": 4
+    },
+    {
+      "urn": "urn:klass-api:classifications:68:codesAt.json?date=2020-03-18&selectCodes=5",
+      "rank": 5
     },
     {
       "urn": "urn:klass-api:classifications:131:codesAt.json?date=2020-03-18&selectCodes=0301",
