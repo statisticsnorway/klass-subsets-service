@@ -6,6 +6,10 @@ module.exports.getSchema = function() {
     return fetch(`${url}/?schema`).then(response => response.json());
 };
 
+module.exports.getSubset = function(id) {
+    return fetch(`${url}/${id}`).then(response => response.json());
+};
+
 module.exports.postSubset = function(subset) {
     return fetch('http://lds-klass.klass.svc.cluster.local/ns/ClassificationSubset/1', {
         method: 'post',
