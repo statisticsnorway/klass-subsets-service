@@ -21,7 +21,13 @@ app.get('/', (req, res) => res.status(200).send('klass subsets service v0.1.3 is
 app.get('/klass-api', (req, res) => {
     fetch('https://data.ssb.no/api/klass/v1/classifications/68/codesAt.json?date=2020-03-18&selectCodes=1')
         .then(response => response.json())
-        .then(data => res.status(200).json(data));
+        .then(klass_data => res.status(200).json(klass_data));
+});
+
+app.get('/lds-klass', (req, res) => {
+    fetch('http://lds-klass.klass.svc.cluster.local/ns/Agent/?schema ')
+        .then(response => response.json())
+        .then(lds_data => res.status(200).json(lds_data));
 });
 
 app.get('/auth', (req, res) => res.status(200).send('AUTHORIZED: klass subsets service v0.1.3 is running'));
