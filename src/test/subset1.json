@@ -2,11 +2,11 @@
   "id": "88bdb2ef-10be-4c10-91b0-a459bd8d9d6f",
   "name": [
     {
-      "languageText": "Oslo Bærum Felter 1 og 2 v2",
+      "languageText": "Oslo Bærum Felter 1 og 5 v3",
       "languageCode": "nb"
     },
     {
-      "languageText": "Oslo Bærum Fields 1 and 2 v2",
+      "languageText": "Oslo Bærum Fields 1 and 5 v3",
       "languageCode": "en"
     }
   ],
@@ -24,15 +24,15 @@
   "administrativeStatus": "OPEN",
   "createdDate": "2020-03-24T13:05:17.343Z",
   "createdBy": "Test user",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "versionValidFrom": "2020-03-25T13:05:17.343Z",
   "versionRationale": [
     {
-      "languageText": "La til kode 5",
+      "languageText": "Fjernet kode 2",
       "languageCode": "nb"
     },
     {
-      "languageText": "Added code 5",
+      "languageText": "Removed code 2",
       "languageCode": "en"
     }
   ],
@@ -55,12 +55,8 @@
       "rank": 1
     },
     {
-      "urn": "urn:klass-api:classifications:68:codesAt.json?date=2020-03-18&selectCodes=2",
-      "rank": 4
-    },
-    {
       "urn": "urn:klass-api:classifications:68:codesAt.json?date=2020-03-18&selectCodes=5",
-      "rank": 5
+      "rank": 4
     },
     {
       "urn": "urn:klass-api:classifications:131:codesAt.json?date=2020-03-18&selectCodes=0301",
