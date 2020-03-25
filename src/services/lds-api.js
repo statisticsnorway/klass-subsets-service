@@ -6,7 +6,7 @@ module.exports.getSchema = function() {
     return fetch(`${url}/?schema`).then(response => response.json());
 };
 
-module.exports.getSubsets = function(id) {
+module.exports.getSubsets = function() {
     return fetch(url).then(response => response.json());
 };
 
@@ -15,7 +15,7 @@ module.exports.getSubset = function(id) {
 };
 
 module.exports.postSubset = function(subset) {
-    return fetch('http://lds-klass.klass.svc.cluster.local/ns/ClassificationSubset/1', {
+    return fetch(url, {
         method: 'post',
         body: JSON.stringify(subset),
         headers: {'Content-Type': 'application/json'}})

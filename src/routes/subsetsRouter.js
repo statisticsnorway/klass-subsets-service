@@ -1,8 +1,5 @@
 const express = require('express');
-const fs = require('fs');
 const lds = require('./../services/lds-api');
-
-const subset1 = JSON.parse(fs.readFileSync('./src/test/subset1.json'));
 
 function routes(data) {
     const subsetsRouter = express.Router();
@@ -13,7 +10,7 @@ function routes(data) {
                 .catch(err => console.error(err))
         })
         .post((req, res) => {
-            lds.postSubset(subset1)
+            lds.postSubset(req.body)
                 .then(subset_data => res.status(200).json(subset_data))
                 .catch(err => console.error(err))
         })
