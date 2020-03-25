@@ -1,22 +1,20 @@
 const express = require('express');
 const lds = require('./../services/lds-api');
 
-function routes(data) {
+function routes() {
     const subsetsRouter = express.Router();
     subsetsRouter.route('/v1/subsets')
         .get((req, res) => {
-            lds.getSubsets()
-                .then(subset_data => res.status(200).json(subset_data))
-                .catch(err => console.error(err))
-        })
-        .post((req, res) => {
-            lds.postSubset(req.body)
-                .then(subset_data => res.status(200).json(subset_data))
-                .catch(err => console.error(err))
-        })
-        .put((req, res) => {
-            data[data.findIndex(i => i.id == req.body.id)] = req.body;
-            res.status(200).json(data.find(i => i.id = req.body.id));
+            // /v1/subsets?schema=lds
+            if (req.query.schema === 'lds') {
+                lds.getSchema()
+                    .then(schema => res.status(200).json(schema))
+                    .catch(err => console.error(err));
+            } else {
+                lds.getSubsets()
+                    .then(subset_data => res.status(200).json(subset_data))
+                    .catch(err => console.error(err))
+            }
         });
 
     subsetsRouter.route('/v1/subsets/:id')
