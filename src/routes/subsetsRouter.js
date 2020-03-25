@@ -10,10 +10,9 @@ function routes(data) {
                 .catch(err => console.error(err))
         })
         .post((req, res) => {
-            const subset = req.body;
-            subset.id = data.length+1;
-            data.push(subset);
-            res.status(200).json(subset);
+            lds.postSubset(req.body)
+                .then(subset_data => res.status(200).json(subset_data))
+                .catch(err => console.error(err))
         })
         .put((req, res) => {
             data[data.findIndex(i => i.id == req.body.id)] = req.body;
