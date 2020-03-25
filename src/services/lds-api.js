@@ -14,8 +14,8 @@ module.exports.getSubset = function(id) {
     return fetch(`${url}/${id}`).then(response => response.json());
 };
 
-module.exports.postSubset = function(subset) {
-    return fetch(url, {
+module.exports.postSubset = function(subset, id = '') {
+    return fetch(`${url}/${id}`, {
         method: 'post',
         body: JSON.stringify(subset),
         headers: {'Content-Type': 'application/json'}})
