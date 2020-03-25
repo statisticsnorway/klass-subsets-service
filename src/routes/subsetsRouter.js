@@ -24,6 +24,11 @@ function routes(data) {
             lds.getSubset(req.params.id)
                 .then(subset_data => res.status(200).json(subset_data))
                 .catch(err => console.error(err))
+        })
+        .post((req, res) => {
+            lds.postSubset(req.body, req.params.id)
+                .then(subset_data => res.status(200).json(subset_data))
+                .catch(err => console.error(err))
         });
 
     return subsetsRouter;
