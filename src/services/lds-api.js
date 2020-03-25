@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const url = 'http://lds-klass.klass.svc.cluster.local/ns/ClassificationSubset';
+const url = process.env.API_LDS;
 
 module.exports.getSchema = function() {
     return fetch(`${url}/?schema`).then(response => response.json());
