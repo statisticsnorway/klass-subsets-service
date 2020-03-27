@@ -13,7 +13,8 @@ app.use(cors());
 const logger = log({ console: true, file: false, label: process.env.npm_package_name });
 app.use(ExpressAPILogMiddleware(logger, { request: true, response: true }));
 
-app.get('/', (req, res) => res.status(200).send(`${process.env.npm_package_name} is running`));
+app.get('/', (req, res) => res.status(200).send(
+    `${process.env.npm_package_name}. Klass API: ${process.env.API_KLASS}. LDS API: ${process.env.API_LDS}`));
 app.get('/version', (req, res) => res.status(200).send(process.env.npm_package_version));
 app.use('/api', subsetsRouter);
 app.use('/auth', subsetsRouter);
