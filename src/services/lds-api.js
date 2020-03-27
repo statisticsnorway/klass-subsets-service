@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-const url = process.env.API_LDS;
+const url = `${process.env.API_LDS}/ns/ClassificationSubset`;
 
 module.exports.getSchema = function() {
     return fetch(`${url}/?schema`).then(response => response.json());
