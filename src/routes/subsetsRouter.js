@@ -1,5 +1,6 @@
 const express = require('express');
 const lds = require('./../services/lds-api');
+const validator = require('./../utils/validator');
 
 function routes() {
     const subsetsRouter = express.Router();
@@ -15,6 +16,13 @@ function routes() {
                     .then(subset_data => res.status(200).json(subset_data))
                     .catch(err => console.error(err))
             }
+        })
+        .post((req, res) => {
+            const subset = validator.validate(req.body);
+            subset.id = "5";
+            lds.postSubset(subset)
+                .then(subset_data => res.status(200).json({ id: subset.id }))
+                .catch(err => console.error(err))
         });
 
     subsetsRouter.route('/v1/subsets/:id')
@@ -23,8 +31,8 @@ function routes() {
                 .then(subset_data => res.status(200).json(subset_data))
                 .catch(err => console.error(err))
         })
-        .post((req, res) => {
-            lds.postSubset(req.body, req.params.id)
+        .put((req, res) => {
+            lds.postSubset(req.body)
                 .then(subset_data => res.status(200).json(subset_data))
                 .catch(err => console.error(err))
         });
