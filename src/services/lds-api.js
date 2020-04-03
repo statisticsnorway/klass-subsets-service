@@ -15,9 +15,11 @@ module.exports.getSubset = function(id) {
 };
 
 module.exports.postSubset = function(subset) {
-    return fetch(`${url}/${subset.id || 1}`, {
-        method: 'post',
+    return fetch(`${url}/${subset.id}`, {
+        method: 'put',
         body: JSON.stringify(subset),
-        headers: {'Content-Type': 'application/json'}})
+        headers: {
+            'Content-Type': 'application/json',
+        }})
         .then(response => response.json());
 };

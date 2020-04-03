@@ -23,8 +23,8 @@
   "shortName": "Test subset 1",
   "administrativeStatus": "OPEN",
   "createdDate": "2020-03-24T13:05:17.343Z",
-  "createdBy": "Test user",
-  "version": "3.0.0",
+  "createdBy": "312 - Seksjon for arbeidsmarked og lønnsstatistikk ",
+  "version": "3.0.1",
   "versionValidFrom": "2020-03-25T13:05:17.343Z",
   "versionRationale": [
     {
@@ -42,6 +42,12 @@
   "validUntil": "2021-03-26T13:05:17.343Z",
   "administrativeDetails": [
     {
+      "administrativeDetailType": "ANNOTATION",
+      "values": [
+        "Internt SSB"
+      ]
+    },
+    {
       "administrativeDetailType": "ORIGIN",
       "values": [
         "https://data.ssb.no/api/klass/v1/classifications/68/codesAt.json?date=2020-03-18",
@@ -51,19 +57,19 @@
   ],
   "codes": [
     {
-      "urn": "urn:klass-api:classifications:68:codesAt.json?date=2020-03-18&selectCodes=1",
+      "urn": "urn:klass-api:classifications:68:code:1",
       "rank": 1
     },
     {
-      "urn": "urn:klass-api:classifications:68:codesAt.json?date=2020-03-18&selectCodes=5",
+      "urn": "urn:klass-api:classifications:68:code:5",
       "rank": 4
     },
     {
-      "urn": "urn:klass-api:classifications:131:codesAt.json?date=2020-03-18&selectCodes=0301",
+      "urn": "urn:klass-api:classifications:131:code:0301",
       "rank": 2
     },
     {
-      "urn": "urn:klass-api:classifications:131:codesAt.json?date=2020-03-18&selectCodes=3024",
+      "urn": "urn:klass-api:classifications:131:code:3024",
       "rank": 3
     }
   ]
