@@ -1,6 +1,6 @@
 module.exports.validate = function(input) {
     const subset = {};
-    subset.id = req.body.name[0].languageText
+    subset.id = input.name[0].languageText
         .toLowerCase()
         .replace(/\s/g, '_')
         .replace(/å|æ/g, 'a')

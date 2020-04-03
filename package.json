@@ -1,6 +1,6 @@
 {
   "name": "klass-subsets-service",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "A server application to expose Klass subsets' REST API to external requests gaining info about classification subsets of codes.",
   "main": "server.js",
   "scripts": {
