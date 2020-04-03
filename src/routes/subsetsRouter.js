@@ -19,11 +19,6 @@ function routes() {
         })
         .post((req, res) => {
             const subset = validator.validate(req.body);
-            subset.id = req.body.name[0].languageText.toLowerCase()
-                .replace(/\s/g, '_')
-                .replace(/å|æ/g, 'a')
-                .replace(/ø/g, 'o')
-                .replace(/\W/g, '');
             lds.postSubset(subset)
                 .then(subset_data => res.status(200).json({ id: subset.id }))
                 .catch(err => console.error(err))
