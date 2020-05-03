@@ -2,7 +2,7 @@
 name: Bug report
 about: Create a report to help us improve
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
 
 ---
@@ -22,6 +22,12 @@ A clear and concise description of what you expected to happen.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
+
+**Suggest a solution**
+Name files, classes, functions to be modified, added or removed in order to solve the issue. Or a strategy, best practives etc.
+
+**Dependencies**
+Issues that have to be solved prior this one.
 
 **Desktop (please complete the following information):**
  - OS: [e.g. iOS]
