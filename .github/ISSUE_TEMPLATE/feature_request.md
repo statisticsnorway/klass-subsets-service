@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this project
 title: ''
-labels: ''
+labels: 'enhancement'
 assignees: ''
 
 ---
@@ -12,6 +12,10 @@ A clear and concise description of what the problem is. Ex. I'm always frustrate
 
 **Describe the solution you'd like**
 A clear and concise description of what you want to happen.
+Name files, classes, functions to be modified, added or removed in order to solve the issue. Or a strategy, best practives etc.
+
+**Dependencies**
+Issues that have to be solved prior this one.
 
 **Describe alternatives you've considered**
 A clear and concise description of any alternative solutions or features you've considered.
