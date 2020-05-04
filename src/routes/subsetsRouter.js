@@ -1,5 +1,4 @@
 const express = require('express');
-const jwt = require('jsonwebtoken');
 const lds = require('./../services/lds-api');
 const validator = require('./../utils/validator');
 
@@ -19,8 +18,6 @@ function routes() {
             }
         })
         .post((req, res) => {
-            const token = jwt.decode(req.header('Authorization'));
-            console.log('Token: ', token);
             const subset = validator.validate(req.body);
             lds.postSubset(subset)
                 .then(subset_data => res.status(200).json({ id: subset.id }))
