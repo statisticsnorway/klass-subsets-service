@@ -1,5 +1,5 @@
 # klass-subsets-service
-/subsets service to store, search and maintain Klass subsets
+Subsets REST service to store, search and maintain Klass subsets
 
 **The application is under development.**
 
